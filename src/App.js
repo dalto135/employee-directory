@@ -12,9 +12,9 @@ function App() {
     return (
         <Router>
             <Header />
-            <Route exact path='/' compontent={List} />
-            <Route exact path='/sort' compontent={Sort} />
-            <Route exact path='/filter' compontent={Filter} />
+            <Route exact path='/' component={List} />
+            <Route exact path='/sort' component={Sort} />
+            <Route exact path='/filter' component={Filter} />
             <img src={logo} className="App-logo" alt="logo" />
         </Router>
     );
