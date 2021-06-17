@@ -1,4 +1,4 @@
-# User Directory
+# Employee Directory
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -27,4 +27,4 @@ A portfolio website designed to both provide my personal information and demonst
 MIT
 
 ## Contact
-Dalton Wilkins - wilkins.271@osu.edu
+Dalton Wilkins - daltongh@gmail.com
