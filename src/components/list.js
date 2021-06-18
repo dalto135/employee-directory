@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react';
 import API from '../utils/API';
 
 function List() {
-    // const [search, setSearch] = useState('');
     const [results, setResults] = useState([]);
 
 
     useEffect(() => {
         API.getList()
             .then(res => {
-                setResults( JSON.stringify(res.data.results));
-                // setResults(res.data.results);
+                setResults(res.data.results);
 
                 for(let i = 0; i < res.data.results.length; i++) {
                     let j = i + 1;
@@ -28,26 +26,24 @@ function List() {
             .catch(err => console.log(err.message));
     }, [])
 
-
-    //search feature(?)
-    // const searchGiphy = query => {
-    //     API.search(query)
-    //         .then(res => setResults({ results: res.data.data}))
-    //         .then(res => console.log(res.data))
-    //         .catch(err => console.log(err.message));
-    // }
-
-    // const handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     this.searchGiphy(this.state.search);
-    // }
-
     return (
         
         <div>
             <h1>List</h1>
-            {/* <p>{results[0].email}</p> */}
-            <p>{results}</p>
+            <div id='categories'>
+                <p>Name</p>
+                <p>Location</p>
+                <p>Email</p>
+            </div>
+                {results.map(result => (
+                    <ul key={result} className='employee'>
+
+                            <li>{result.name.first + ' ' + result.name.last}</li>
+                            <li>{result.location.city + ', ' + result.location.country}</li>
+                            <li>{result.email}</li>
+                        
+                    </ul>
+                ))}
         </div>
         
     );

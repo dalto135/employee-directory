@@ -69,7 +69,7 @@ div {
     flex: 1 1;
 }
 
-h1, h2, p, a, button {
+h1, h2, p, a, button, li {
     background-color: var(--cloudy);
     padding: 3px;
 }
@@ -80,4 +80,33 @@ a {
 
 p {
     font-family: 'Times New Roman', Times, serif;
+}
+
+#categories, .employee {
+    display: flex;
+    justify-content: space-around;
+}
+
+.employee li {
+    flex: 1 1;
+    text-align: center;
+    list-style-type: none;
+}
+
+/* .employee p {
+    text-align: center;
+    flex: 1 1;
+} */
+
+#categories {
+    border-color: var(--green);
+}
+
+#categories p {
+    flex: 1 1;
+    text-align: center;
+}
+
+ul {
+    border-color: var(--teal);
 }
