@@ -5,9 +5,12 @@ function Header() {
     return (
         <div id='header'>
             {/* <h1>Employee Directory</h1> */}
-            <Link to='/'>Employee Directory</Link>
+            <h1>
+                <Link to='/'>Employee Directory</Link>
+            </h1>
+            
             <div>
-                <input></input>
+                {/* <input></input> */}
                 <Link to='/'>List</Link>
                 <Link to='/sort'>Sort</Link>
                 <Link to='/filter'>Filter</Link>

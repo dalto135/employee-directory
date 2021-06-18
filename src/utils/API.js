@@ -1,17 +1,13 @@
-// import axios from "axios";
-// const BASEURL = 'https://randomuser.me/api/';
-// const APIKEY = 'hello';
+import axios from "axios";
 
-// export default {
-//   search: function(query) {
-//     return axios.get(BASEURL + query + APIKEY);
-//   }
-// };
-
-// $.ajax({
-//     url: 'https://randomuser.me/api/',
-//     dataType: 'json',
-//     success: function(data) {
-//       console.log(data);
-//     }
-// });
+export default {
+    getList: function() {
+      return axios.get('https://randomuser.me/api/?results=10&inc=name,location,email');
+    },
+    getSort: function() {
+      return axios.get('https://randomuser.me/api/?results=10&inc=name,location,email');
+    },
+    getFilter: function() {
+      return axios.get('https://randomuser.me/api/?results=10&inc=name,location,email&gender=female');
+    }
+  };
