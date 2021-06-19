@@ -8,25 +8,29 @@ function Sort({results}) {
         sortedResults.push(i);
     });
 
-    sortedResults.sort(function(a, b) {
-        var nameA = a.name.last.toUpperCase();
-        var nameB = b.name.last.toUpperCase();
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
+    // sortedResults.sort(function(a, b) {
+    //     var nameA = a.name.last.toUpperCase();
+    //     var nameB = b.name.last.toUpperCase();
+    //     if (nameA < nameB) {
+    //       return -1;
+    //     }
+    //     if (nameA > nameB) {
+    //       return 1;
+    //     }
       
-        return 0;
-      });
+    //     return 0;
+    // });
+
+    sortedResults.sort(function (a, b) {
+        return a.dob.age - b.dob.age;
+    });
 
     console.log('sort results');
     console.log(sortedResults);
 
     return (
         <div className='div'>
-            <h1>Employees: Sorted by last name</h1>
+            <h1>Employees: Sorted by age</h1>
             <div id='categories'>
                 <h2>Name</h2>
                 <h2>Age</h2>

@@ -119,14 +119,23 @@ ul {
     margin: 0;
 }
 
-#links {
+#links, #view {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#view a {
+    flex: 1 1;
+    text-align: center;
 }
 
 #links a {
     flex: 1 1;
     text-align: center;
+}
+#links input {
+    flex: 2 2;
 }
 
 #title a {
@@ -136,7 +145,7 @@ ul {
     margin: 6px 3px 0px 3px;
 }
 
-#root, #header, .div {
+#root, #header, .div, #view {
     border-width: 0;
     margin: 0;
     padding: 0;

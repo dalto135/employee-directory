@@ -7,11 +7,9 @@ function Header() {
             <h1 id='title'>
                 <Link to='/'>Employee Directory</Link>
             </h1>
-            
-            <div id='links'>
+            <div id='view'>
                 <Link to='/'>View Employees</Link>
                 <Link to='/sort'>View Sorted</Link>
-                <Link to='/filter'>View Filtered</Link>
             </div>
         </div>
     );
