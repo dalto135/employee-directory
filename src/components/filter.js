@@ -14,11 +14,11 @@ function Filter({results}) {
     return (
         
         <div className='div'>
-            <h1>Filtered: Employees 30 or younger</h1>
+            <h1>Employees: 30 years old and younger</h1>
             <div id='categories'>
-                <p>Name</p>
-                <p>Age</p>
-                <p>Location</p>
+                <h2>Name</h2>
+                <h2>Age</h2>
+                <h2>Location</h2>
             </div>
                 {youngPeople.map(result => (
                     <ul key={result.email} className='employee'>

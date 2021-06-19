@@ -26,11 +26,11 @@ function Sort({results}) {
 
     return (
         <div className='div'>
-            <h1>Sorted: By last name</h1>
+            <h1>Employees: Sorted by last name</h1>
             <div id='categories'>
-                <p>Name</p>
-                <p>Age</p>
-                <p>Location</p>
+                <h2>Name</h2>
+                <h2>Age</h2>
+                <h2>Location</h2>
             </div>
                 {sortedResults.map(result => (
                     <ul key={result.email} className='employee'>

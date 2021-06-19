@@ -9,9 +9,9 @@ function Header() {
             </h1>
             
             <div id='links'>
-                <Link to='/'>List</Link>
-                <Link to='/sort'>Sort</Link>
-                <Link to='/filter'>Filter</Link>
+                <Link to='/'>View Employees</Link>
+                <Link to='/sort'>View Sorted</Link>
+                <Link to='/filter'>View Filtered</Link>
             </div>
         </div>
     );
