@@ -1,8 +1,5 @@
 * {
     border: 2px solid black;
-    /* margin: 8px 4px;
-    padding: 0px 4px;
-    border-radius: 8px; */
 
     margin: 6px 3px;
     padding: 0px 3px;
@@ -53,12 +50,12 @@ section {
     border-color: var(--teal);
     display: flex;
 }
-
+/* 
 @media screen and (max-width: 850px) {
     section {
         display: block;
     }
-}
+} */
 
 footer {
     border-color: var(--green);
@@ -94,11 +91,6 @@ p, li {
     text-align: center;
     list-style-type: none;
 }
-
-/* .employee p {
-    text-align: center;
-    flex: 1 1;
-} */
 
 #categories {
     border-color: var(--green);
@@ -141,4 +133,11 @@ ul {
     flex: 1 1;
     text-align: center;
     background-color: var(--pastelBlue);
+    margin: 6px 3px 0px 3px;
+}
+
+#root, #header, .div {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
 }
