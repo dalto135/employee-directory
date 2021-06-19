@@ -1,20 +1,6 @@
-// import React, { useEffect, useState } from 'react';
-// import React from 'react';
-// import API from '../utils/API';
 import React from 'react';
-// import ListItems from './listItems';
 
 function Filter({results}) {
-    // const [results, setResults] = useState([]);
-
-    // useEffect(() => {
-    //     API.getList()
-    //         .then(res => {
-    //             setResults(res.data.results);
-    //         })            
-    //         .catch(err => console.log(err.message));
-    // }, [])
-
     let youngPeople = [];
     results.forEach(i => {
         if (i.dob.age <= 30) {
@@ -43,7 +29,6 @@ function Filter({results}) {
                             
                     </ul>
                 ))}
-                {/* <ListItems results={results} /> */}
         </div>
         
     );

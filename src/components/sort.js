@@ -1,57 +1,38 @@
-// import React, { useEffect, useState } from 'react';
-// import API from '../utils/API';
 import React from 'react';
 
 function Sort({results}) {
-    // const [results, setResults] = useState([]);
 
+    let sortedResults = [];
 
-    // useEffect(() => {
-    //     API.getList()
-    //         .then(res => {
-    //             setResults(res.data.results);
+    results.forEach(i => {
+        sortedResults.push(i);
+    });
 
-    //             // for(let i = 0; i < res.data.results.length; i++) {
-    //             //     let j = i + 1;
-    //             //     let items = res.data.results[i];
-
-    //             //     console.log(j + '.');
-    //             //     console.log('Name: ' + items.name.first + ' ' + items.name.last);
-    //             //     console.log('Location: ' + items.location.city + ', ' + items.location.country);
-    //             //     console.log('Email: ' + items.email);
-    //             //     console.log('');
-    //             // }
-
-    //             // console.log(res.data.results);
-    //         })            
-    //         .catch(err => console.log(err.message));
-    // }, [])
-
-    // const ordered = Object.keys(results).sort().reduce(
-    //     (obj, key) => { 
-    //       obj[key] = results[key]; 
-    //       return obj;
-    //     }, 
-    //     {}
-    //   );
-
-    //   console.log(JSON.stringify(ordered));
+    sortedResults.sort(function(a, b) {
+        var nameA = a.name.last.toUpperCase();
+        var nameB = b.name.last.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+      
+        return 0;
+      });
 
     console.log('sort results');
-    console.log(results);
+    console.log(sortedResults);
 
     return (
-        
-
-
         <div className='div'>
-            <h1>Sorted: By name</h1>
+            <h1>Sorted: By last name</h1>
             <div id='categories'>
                 <p>Name</p>
                 <p>Age</p>
                 <p>Location</p>
             </div>
-                {results.map(result => (
+                {sortedResults.map(result => (
                     <ul key={result.email} className='employee'>
 
                             <li>{result.name.first + ' ' + result.name.last}</li>
@@ -61,7 +42,6 @@ function Sort({results}) {
                     </ul>
                 ))}
         </div>
-
     );
 }
 
