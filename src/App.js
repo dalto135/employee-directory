@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import API from './utils/API';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/header';
 import List from './components/list';
 import Sort from './components/sort';
 import Filter from './components/filter';
 import './reset.css';
-import logo from './logo.svg';
-// import './App.css';
 
 function App() {
+    const [results, setResults] = useState([]);
+
+
+    useEffect(() => {
+        API.getList()
+            .then(res => {
+                setResults(res.data.results);
+            })            
+            .catch(err => console.log(err.message));
+    }, [])
+
+    console.log('app results');
+    console.log(results);
+
     return (
         <Router>
             <Header />
-            <Route exact path='/' component={List} />
-            <Route exact path='/sort' component={Sort} />
-            <Route exact path='/filter' component={Filter} />
-            <img src={logo} className="App-logo" alt="logo" />
+            <Route exact path='/' render={() => <List results={results}/>} /> 
+            <Route exact path='/sort' render={() => <Sort results={results}/>} />
+            <Route exact path='/filter' render={() => <Filter results={results}/>} />
         </Router>
     );
 }
