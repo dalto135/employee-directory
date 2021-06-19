@@ -128,6 +128,7 @@ ul {
 #view a {
     flex: 1 1;
     text-align: center;
+    margin: 6px 3px 0px 3px;
 }
 
 #links a {
