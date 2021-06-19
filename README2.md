@@ -17,7 +17,7 @@ https://vast-earth-63282.herokuapp.com/
 HTML and CSS, Javascript, React, Axios, Yarn
 
 ## Description
-A directory webpage that displays a list of randomly generated employees along with their information. The list can be sorted by last name and filtered down to employees 30 years old and younger.
+A React webpage directory that displays a list of randomly generated employees along with their information. The list can be sorted by last name and filtered down to employees 30 years old and younger.
 
 ## Screenshots
 ![Screenshot 1](assets/images/screenshot1.png)
