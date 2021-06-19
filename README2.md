@@ -11,17 +11,18 @@
 [Contact](#Contact)
 
 ## Link
-https://dalto135.github.io/portfolio/
+https://vast-earth-63282.herokuapp.com/
 
 ## Technologies
-HTML and CSS
+HTML and CSS, Javascript, React, Axios, Yarn
 
 ## Description
-A portfolio website designed to both provide my personal information and demonstrate various skills using html and css. For the displayed work, I have the first group project completed in the bootcamp as well as two exemplary homework assignments. Links to the git pages and github sites are available in this section.
+A directory webpage that displays a list of randomly generated employees along with their information. The list can be sorted by last name and filtered down to employees 30 years old and younger.
 
 ## Screenshots
 ![Screenshot 1](assets/images/screenshot1.png)
 ![Screenshot 2](assets/images/screenshot2.png)
+![Screenshot 3](assets/images/screenshot3.png)
 
 ## License
 MIT
